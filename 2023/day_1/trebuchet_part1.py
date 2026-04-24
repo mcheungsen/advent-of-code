@@ -4,7 +4,7 @@ start_time = time.time()
 file = open("2023/day_1/input.txt")
 lines = [line.strip("\n") for line in file]
 
-sum = 0
+res = 0
 
 for line in lines :
     index = 0
@@ -16,7 +16,7 @@ for line in lines :
         if last_digit is None and line[len(line)-1-index].isnumeric()  :
             last_digit = line[len(line)-1-index]
         index += 1
-    sum += int(first_digit+last_digit)
+    res += int(first_digit+last_digit)
 
-print(f"the result is = {sum}")
+print(f"the result is = {res}")
 print("--- %s seconds ---" % (time.time() - start_time))
