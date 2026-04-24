@@ -12,7 +12,7 @@ Pour la première approche :
 L'idée est de parcourir chaque set de chaque jeu, et si le set est possible, on l'additionne au résultat.
 
 ### Approche 2
-Dans la première approche, je ne m'arrête que sur le set, et non sur le jeu. je continue de parcourir le jeu actuel en sachant pertinement qu'il est faux et que je ne l'additionnerai pas au résultat. 
+Dans la première approche, je ne m'arrête que sur le set, et non sur le jeu. je continue de parcourir le jeu actuel en sachant pertinemment qu'il est faux et que je ne l'additionnerai pas au résultat. 
 
 - For devient un while : éviter de parcourir alors qu'on a déjà la réponse
 
