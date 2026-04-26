@@ -7,7 +7,6 @@ file = open("2023/day_3/input_example.txt")
 lines = [line for line in file]
 
 def get_indexes_neighbors(index_line:int, index_char: int):
-    # TODO : Récup les indexes qui sont des nombres autour du symbole
     neighbors_indexes = []
     
     for i_line in range(-1,2):
