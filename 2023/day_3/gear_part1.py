@@ -1,3 +1,6 @@
+'''Doing Day 5 first. Will do this after'''
+
+
 import time
 start_time = time.time()
 
