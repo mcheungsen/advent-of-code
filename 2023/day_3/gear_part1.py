@@ -3,8 +3,8 @@ start_time = time.time()
 
 
 result = 0
-file = open("2023/day_3/input_example.txt")
-lines = [line for line in file]
+file = open("2023/day_3/input.txt")
+lines = [line.strip("\n") for line in file]
 
 def get_indexes_neighbors(index_line:int, index_char: int):
     neighbors_indexes = []
@@ -52,7 +52,8 @@ for index_line in range(len(lines)) :
     for index_char in range(len(lines[index_line])) :
         current_char = line[index_char]
         if not current_char.isnumeric() and current_char != ".":
-            result += sum(get_neighbors_numbers(index_line, index_char))
+            numbers = get_neighbors_numbers(index_line, index_char)
+            result += sum(numbers)
 
 print(f"The result is = {result}")
 print("--- %s seconds ---" % (time.time() - start_time))
