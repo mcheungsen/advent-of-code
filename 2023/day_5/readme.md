@@ -78,3 +78,20 @@ même principe que à gauche : on divise
 > `seed_droite => (seed_source + center_range), (seed_range - center_range)`
 
 Split "droite" 
+
+### Main code
+
+On va modifier les valeurs des seeds pour chaque opération.
+Donc on commence par la première étape : 
+1. Pour chaque étape, je vais parcourir toutes les seeds. J'ai donc ma seed courante.
+2. Je regarde toutes les opérations. (dès que j'applique une opération je break sur les opérations pour éviter de faire plusieurs opérations pour une même étape)
+3. Je trouve l'opération à faire. je récupère donc ces valeurs : destination, source, range
+4. On vérifie si on doit Split la seed. (gauche ou droite ou les deux)
+5. Pour les seeds out of range : on ajoute à la liste des seeds. On fera l'opération à la fin. La taille des seeds augmente : il ne faut pas boucler sur les seeds, mais boucler sur la taille du tableau des seeds pour que le tableau soit FLEXIBLE sur le parcours.
+6. On fait le calcul de l'opération pour la seed actuelle et on passe à la suite.
+
+ces étapes faites, on boucle sur les autres étapes et les autres seeds.
+
+Dans la premiere partie, pour une graine, on faisait TOUTES les opérations. Maintenant, pour la partie 2, pour une opération, on modifie chaque rangée de graines pas à pas.
+
+On se perd facilement dans le compréhension des calculs, j'ai donc décidé de faire des variables compréhensibles (surtout pour moi qui ai du mal à visualiser par range, j'ai ajouté des variables de min et max pour mes seeds).
